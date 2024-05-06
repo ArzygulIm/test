@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: "Muller Regular", Arial, sans-serif; 
+    font-family: "Muller Regular", Arial, sans-serif;
 }
 
 .container {
@@ -40,6 +40,15 @@ button {
     height: 60px;
     font-size: 16px;
     line-height: 55px;
+    transition: ease-in-out .5s;
+}
+
+button:hover {
+    box-shadow: 0px 3px 7.5px #b475005d;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -56,12 +65,28 @@ header .header__wrap {
     justify-content: space-between;
 }
 
-header nav {
+header nav a {
     font-size: 16px;
     letter-spacing: 0px;
     color: #a46b00;
+    transition: ease-in-out .5s;
+    position: relative;
 }
 
+header nav a::after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: #a46b00;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
 header nav ul {
     display: flex;
     list-style: none;
@@ -137,7 +162,6 @@ h1 span {
 }
 
 h5 {
-
     font-size: 35px;
     line-height: 55px;
     color: #bd985c;
@@ -462,7 +486,8 @@ h5 {
         font-size: 13px;
     }
 
-    .choose_pizza__cards p,.order__wrap p {
+    .choose_pizza__cards p,
+    .order__wrap p {
         font-size: 12px;
     }
 

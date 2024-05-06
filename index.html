@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -18,10 +19,10 @@
                 </div>
                 <nav class="nav wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
                     <ul>
-                        <li class="nav__item">Пиццы</li>
-                        <li class="nav__item">Напитки</li>
-                        <li class="nav__item">Доставка и оплата</li>
-                        <li class="nav__item">Контакты</li>
+                        <li class="nav__item"><a href="#"> Пиццы</a></li>
+                        <li class="nav__item"><a href="#"> Напитки</a></li>
+                        <li class="nav__item"><a href="#"> Доставка и оплата</a></li>
+                        <li class="nav__item"><a href="#"> Контакты</a></li>
                     </ul>
                 </nav>
 
@@ -70,7 +71,8 @@
                         </div>
                         <button class="choose_pizza__button">Выбрать пиццу</button>
                     </div>
-                    <img class="choose_pizza__img wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s" src="./images/big_pizza.png" alt="">
+                    <img class="choose_pizza__img wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s"
+                        src="./images/big_pizza.png" alt="">
                 </div>
 
             </div>
@@ -79,7 +81,8 @@
         <section id="catalog">
             <div class="container">
                 <div class="catalog__wrap">
-                    <h5 class="wow animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.5s">Выберите свою любимую пиццу </h5>
+                    <h5 class="wow animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0.5s">Выберите свою
+                        любимую пиццу </h5>
                     <div class="row">
                         <div class="col-3">
                             <div class="catalog__box">
@@ -170,7 +173,8 @@
                     </div>
                     <form action="">
                         <label for="order_name">
-                            <input type="text" id="order_name">
+                            <input type="text" id="order_name" pattern="[A-Za-z-]+"
+                                title="Можно вводить только буквы и дефис">
                             <span id="order_name__span">Ваше имя</span>
                         </label>
                         <label for="order_adress">
@@ -188,7 +192,7 @@
             </div>
         </section>
 
-        <!-- <section id="popup">
+        <section id="popup">
             <div class="backdrop"></div>
             <div class="container popup_container">
                 <div class="popup">
@@ -196,9 +200,7 @@
                     <h6>Спасибо за заказ!</h6>
                 </div>
             </div>
-
-
-        </section> -->
+        </section>
     </main>
 
     <script src="node_modules/wowjs/dist/wow.min.js"></script>
@@ -206,7 +208,11 @@
         new WOW().init();
     </script>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./fancyBox.js"></script>
 </body>
 
 </html>
